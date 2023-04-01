@@ -5,8 +5,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/NotPerr/FrontendMentor/tree/main/qr-code-component-main)
-- Live Site URL: [Add live site URL here](https://incomparable-genie-fd7b5a.netlify.app/)
+- Solution URL: [solution repo](https://github.com/NotPerr/FrontendMentor/tree/main/qr-code-component-main)
+- Live Site URL: [live site](https://incomparable-genie-fd7b5a.netlify.app/)
 
 ## My process
 
