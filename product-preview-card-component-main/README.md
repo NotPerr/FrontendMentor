@@ -27,7 +27,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 ### Links
 
 - Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-preview-card-with-slide-in-animation-QN_1qGnG9I)
-- Live Site URL: [Solution](https://unrivaled-longma-87170d.netlify.app/)
+- Live Site URL: [View it live here](https://unrivaled-longma-87170d.netlify.app/)
 
 ## My process
 
