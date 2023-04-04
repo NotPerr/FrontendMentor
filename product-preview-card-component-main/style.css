@@ -1,0 +1,153 @@
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+/* Fraunces */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+/* font-family: 'Fraunces', serif; */
+
+
+body {
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+}
+
+h2 {
+    font-weight: 500;
+    padding-top: 0;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+}
+
+h2,
+p {
+    color: rgba(130, 131, 135, 1);
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.preview img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.content {
+    padding: 0 20px 20px 20px;
+}
+
+.description {
+    line-height: 1.5;
+}
+
+.discount-price {
+    color: rgba(61, 129, 104, 1);
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    margin-right: .5rem;
+}
+
+.price {
+    text-decoration-line: line-through;
+    font-size: .5rem;
+}
+
+.card button {
+    background-color: rgba(61, 129, 104, 1);
+    border-width: 0;
+    display: flex;
+    border-radius: 8px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: .8rem;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.card button:hover {
+    background-color: rgba(26, 64, 49, 1);
+}
+
+.svg-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: .5rem;
+}
+
+.desktop-img {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+    }
+
+    .preview img {
+        border-radius: 8px 0 0 8px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        font-size: 16px;
+    }
+
+    .card {
+        max-width: 60%;
+        height: 392.45px;
+    }
+
+    .content {
+        padding: 30px 30px 30px 30px;
+    }
+
+    .preview {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .preview img {
+        border-radius: 8px 0 0 8px;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .card {
+        max-width: 45%;
+    }
+    .content {
+        padding: 35px 35px 35px 35px;
+    }
+}
