@@ -25,8 +25,8 @@ This is a screenshot of my solution.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/responsive-email-page-ZjlztK2FZp)
+- Live Site URL: [View it live here](https://shimmering-crepe-982945.netlify.app/)
 
 ## My process
 
