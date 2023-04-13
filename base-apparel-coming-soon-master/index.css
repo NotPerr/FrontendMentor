@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    max-width: 100vh;
 }
 
 nav {
@@ -16,11 +17,14 @@ nav {
 }
 
 
-.banner {
+.banner-mobile {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+.banner-desktop {
+    display: none;
 }
 
 .welcome {
@@ -92,6 +96,66 @@ form button {
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%) , hsl(0, 74%, 74%));
 }
 
+@media screen and (min-width: 700px) {
+    nav {
+        height: 10%;
+    }
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+    .banner-mobile {
+        display: none;
+    }
+    .banner-desktop {
+        display: block;
+        width: 100%;
+    }
+    .welcome-container {
+        padding-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        min-width: 100vw;
+        font-size: 18px;
+    }
+    .welcome-container {
+        padding-top: 2rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .welcome {
+        width: 20%;
+        text-align: left;
+        margin-left: 5rem;
+    }
+    .content {
+        margin-left: 5rem;
+        padding-left: 0;
+        width: 50%;
+    }
+    .content p {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    body {
+        font-size: 20px;
+    }
+
+    .welcome-container {
+        padding-top: 5rem;
+        padding-left: 8rem;
+        padding-right: 0;
+    }
+}
 
 
 
