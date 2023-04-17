@@ -1,7 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 /* Weights: 400, 500, 600, 700 */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    max-width: 1440px;
+    background: url("./images/bg-intro-mobile.png") hsl(0, 100%, 74%);
+    background-image: url("./images/bg-intro-mobile.png");
+    background-position: center;
+    background-blend-mode: multiply;
 }
+
+main {
+    margin: 1rem;
+}
+
+main h1{
+    color: #fff;
+    margin: 1rem auto;
+    text-align: center;
+    font-weight: 700;
+}
+main p {
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+}
+
+.free-trial {
+    color: #fff;
+    background-color: hsl(248, 32%, 49%);
+    text-align: center;
+    border-radius: 5px;
+    padding: .8rem 4rem;
+    font-weight: 300;
+    margin-top: 2.5rem;
+    box-shadow: 0 8px hsl(359, 60%, 62%);
+}
+.free-trial span {
+    font-weight: 600;
+}
+
+form {
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 1.25rem;
+    padding-bottom: .8rem;
+    box-shadow: 0 8px hsl(359, 60%, 62%);
+}
+form input {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: .5rem;
+    border-radius: 2.5px;
+    border:  1px solid hsl(246, 25%, 77%);
+}
+form button {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 2.5px;
+    font-weight: 400;
+}
+
+.terms {
+    color: hsl(246, 25%, 77%);
+    font-size: .8rem;
+    font-weight: 300;
+    text-align: center;
+}
+.terms a {
+    color: hsl(0, 100%, 74%);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        display: flex;
+        max-width: 85%;
+    }
+    main h1 {
+        margin: 0;
+        text-align: left;
+    }
+    main p {
+        text-align: left;
+    }
+    .description {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .form {
+        width: 50%;
+    }
+
+    .free-trial {
+        padding: .5rem 1rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main h1 {
+        padding-right: 10rem;
+    }
+}
+
