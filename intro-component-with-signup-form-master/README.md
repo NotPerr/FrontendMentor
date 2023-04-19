@@ -40,7 +40,7 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 ### Useful resources
 
 - [addEventListener's third parameter](https://stackoverflow.com/questions/17564323/what-does-the-third-parameter-false-indicate-in-document-addeventlistenerdev) - This helped me understand the third parameter of addEventListener.
-- [Customize Form invalid message](https://www.example.com) - This helped me to implement customized error message.
+- [Customize Form invalid message](https://codepen.io/javascriptacademy-stash/pen/oNeNMNR) - This helped me to implement customized error message.
 
 
 
