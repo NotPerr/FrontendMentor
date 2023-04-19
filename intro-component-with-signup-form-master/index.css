@@ -13,7 +13,6 @@ body {
     min-height: 100vh;
     max-width: 1440px;
     background: url("./images/bg-intro-mobile.png") hsl(0, 100%, 74%);
-    background-image: url("./images/bg-intro-mobile.png");
     background-position: center;
     background-blend-mode: multiply;
 }
@@ -56,19 +55,20 @@ form {
     margin-top: 1.25rem;
     padding-bottom: .8rem;
     box-shadow: 0 8px hsl(359, 60%, 62%);
+    position: relative;
 }
 form input {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     display: block;
     width: 100%;
-    margin-bottom: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: .5rem;
     border-radius: 2.5px;
     border:  1px solid hsl(246, 25%, 77%);
 }
+
 form button {
     font-family: 'Poppins', sans-serif;
     color: #fff;
@@ -78,6 +78,40 @@ form button {
     width: 100%;
     border-radius: 2.5px;
     font-weight: 400;
+    transition: all .5s;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #77E2B4;
+}
+
+
+form input:focus {
+    outline: 0;
+    border:  1px solid black;
+}
+
+.input-control {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+.input-control .error {
+    position: absolute;
+    right: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
 }
 
 .terms {
@@ -102,6 +136,7 @@ form button {
 @media screen and (min-width: 1000px) {
     body {
         font-size: 18px;
+        background: url("./images/bg-intro-desktop.png") hsl(0, 100%, 74%);
     }
 
     main {

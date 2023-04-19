@@ -38,13 +38,31 @@
     <div class="form">
       <div class="free-trial"><span>Try it free 7 days</span> then $20/mo. thereafter</div>
     
-      <form>
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="email" placeholder="Email Address">
-        <input type="password" placeholder="Password">
+      <form id="form" action="#">
+        <div class="input-control">
+          <input type="text" name="fname" id="fname" placeholder="First Name" required title="Please enter at least 3 characters">
+         <div class="error"></div>
+        </div>
 
-        <button>Claim your free trial</button>
+        <div class="input-control">
+          <input type="text" id="lname" placeholder="Last Name" required>
+        <div class="error"></div>
+        </div>
+
+        <div class="input-control">
+          <input type="email" id="email" placeholder="Email Address" required>
+        <div class="error"></div>
+        </div>
+
+        <div class="input-control">
+          <input type="password" id="password" placeholder="Password" required>
+        <div class="error"></div>
+        </div>
+        
+        
+        
+
+        <button type="submit">Claim your free trial</button>
         <p class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
       </form>
     </div>
@@ -68,6 +86,7 @@
       Coded by <a href="#">Perri</a>.
     </p>
   </footer>
+<script src="./index.js"></script>
 </body>
 
 </html>
