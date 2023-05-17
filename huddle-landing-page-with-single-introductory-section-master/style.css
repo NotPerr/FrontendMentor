@@ -102,6 +102,9 @@ ul li a {
     cursor: pointer;
     text-decoration: none;
 }
+ul li a:hover {
+    color: hsl(300, 69%, 71%);
+}
 
 ul {
     width: 100%;
@@ -111,9 +114,34 @@ ul {
 }
 
 footer {
-    width: 20rem;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
 }
 footer a {
     color: #fff;
+}
+
+
+
+/* for medium screen */
+@media screen and (min-width: 700px) {
+    header img {
+        width: 10rem;
+    }
+
+    .banner img {
+        width: 28rem;
+        margin-top: 8rem;
+    }
+
+    h1 {
+        width: 20rem;
+        font-size: 1.8rem;
+    }
+
+    p {
+        width: 22rem;
+        font-size: 1.2rem;
+    }
 }
