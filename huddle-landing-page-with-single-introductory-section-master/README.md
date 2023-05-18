@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/responsive-landing-page-with-slide-in-animation-YCb1T0YRW2)
 - Live Site URL: [View live site here](https://relaxed-gelato-0ed249.netlify.app/)
 
 ## My process
