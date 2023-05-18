@@ -66,5 +66,19 @@
       Coded by <a href="#">Perri</a>.
     </p>
   </footer>
+
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2000,
+    delay: 400,
+    // reset: true, //Animations repeat
+});
+  sr.reveal(".banner");
+  sr.reveal(".content",{delay: 500})
+  </script>
 </body>
 </html>
