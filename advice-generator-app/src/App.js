@@ -20,7 +20,6 @@ function App() {
   return (
     <div className="App">
       <main>
-        
         <br />
         #{advice.id}
         <br />
