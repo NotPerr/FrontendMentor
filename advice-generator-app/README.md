@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://spiffy-custard-ebdb7f.netlify.app/)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/responsive-advice-generator-made-with-react-and-tailwind-css-CqPh8kpN9S)
 - Live Site URL: [live site](https://spiffy-custard-ebdb7f.netlify.app/)
 
 ## My process
