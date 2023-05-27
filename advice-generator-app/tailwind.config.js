@@ -20,6 +20,9 @@ module.exports = {
       },
       spacing: {
         'n23px': '-23px'
+      },
+      dropShadow: {
+        'btn': '0 0 0.75rem hsl(150, 100%, 66%)'
       }
     },
   },
