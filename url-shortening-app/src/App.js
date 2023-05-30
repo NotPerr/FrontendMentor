@@ -14,9 +14,16 @@ function App() {
       setUrlList(JSON.parse(storedArray));
     }
   }, []);
+
+  const [isInvalid,setIsInvalid] = useState(false);
   
 
   const fetchData = async () => {
+    if (!isValidLink(userInput)) {
+      console.log("Invalid link");
+      setIsInvalid(true);
+      return;
+    }
     try {
       const response = await axios(
         `https://api.shrtco.de/v2/shorten?url=${userInput}`
@@ -28,6 +35,11 @@ function App() {
     } catch (e) {
       console.log(e);
     }
+  };
+
+  const isValidLink = (link) => {
+    const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+    return urlPattern.test(link);
   };
 
 
@@ -57,6 +69,7 @@ function App() {
           value={userInput}
           onChange={(e) => { setUserInput(e.target.value) }}
         />
+        {isInvalid ? <span>Please add a link</span> : null}
         <button onClick={fetchData}>Shorten It!</button>
       </section>
 
