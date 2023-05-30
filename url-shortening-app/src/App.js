@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import './index.css'
 import ShowUrlList from './ShowUrlList';
+
+
 
 function App() {
 
   const [userInput, setUserInput] = useState("");
- 
+
   const [urlList, setUrlList] = useState([]);
   useEffect(() => {
     const storedArray = localStorage.getItem('urlList');
@@ -15,8 +18,8 @@ function App() {
     }
   }, []);
 
-  const [isInvalid,setIsInvalid] = useState(false);
-  
+  const [isInvalid, setIsInvalid] = useState(false);
+
 
   const fetchData = async () => {
     if (!isValidLink(userInput)) {
@@ -31,7 +34,7 @@ function App() {
       const newShortenedLink = response.data.result;
       const newArr = [...urlList, newShortenedLink];
       setUrlList(newArr);
-      
+
     } catch (e) {
       console.log(e);
     }
@@ -44,42 +47,45 @@ function App() {
 
 
   useEffect(() => {
-    if(urlList.length >= 1) {
+    if (urlList.length >= 1) {
       localStorage.setItem("urlList", JSON.stringify(urlList));
     }
-    
+
   }, [urlList]);
 
 
 
   return (
     <div className="App">
-      <header className="App-header">
-        header
-        <nav className='mobile-nav'>mobile nav</nav>
-      </header>
+      <div className='px-5'>
+        <header className="App-header">
+          header
+          <nav className='mobile-nav'>mobile nav</nav>
+        </header>
 
-      <section className='banner'>banner</section>
+        <section className='banner'>banner</section>
 
-      <section className='url-input'>
-        <input
+        <section className='url-input'>
+          <input
 
-          type="text"
-          placeholder="Shorten a link here..."
-          value={userInput}
-          onChange={(e) => { setUserInput(e.target.value) }}
-        />
-        {isInvalid ? <span>Please add a link</span> : null}
-        <button onClick={fetchData}>Shorten It!</button>
-      </section>
+            type="text"
+            placeholder="Shorten a link here..."
+            value={userInput}
+            onChange={(e) => { setUserInput(e.target.value) }}
+          />
+          {isInvalid ? <span>Please add a link</span> : null}
+          <button onClick={fetchData}>Shorten It!</button>
+        </section>
 
-      <section className='shorten-url'>
+        <section className='shorten-url'>
 
-        <ShowUrlList urlList={urlList} />
+          <ShowUrlList urlList={urlList} />
 
-      </section>
+        </section>
 
-      <section className='info'>info</section>
+        <section className='info'>info</section>
+      </div>
+
 
       <section className='start'>start</section>
 
