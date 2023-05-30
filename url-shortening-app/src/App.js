@@ -1,23 +1,43 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+import ShowUrlList from './ShowUrlList';
 
 function App() {
 
   const [userInput, setUserInput] = useState("");
-  const [shortenedLink, setShortenedLink] = useState({});
+ 
+  const [urlList, setUrlList] = useState([]);
+  useEffect(() => {
+    const storedArray = localStorage.getItem('urlList');
+    if (storedArray) {
+      setUrlList(JSON.parse(storedArray));
+    }
+  }, []);
+  
 
   const fetchData = async () => {
     try {
       const response = await axios(
         `https://api.shrtco.de/v2/shorten?url=${userInput}`
       );
-      setShortenedLink(response.data.result);
+      const newShortenedLink = response.data.result;
+      const newArr = [...urlList, newShortenedLink];
+      setUrlList(newArr);
+      
     } catch (e) {
       console.log(e);
     }
   };
+
+
+  useEffect(() => {
+    if(urlList.length >= 1) {
+      localStorage.setItem("urlList", JSON.stringify(urlList));
+    }
+    
+  }, [urlList]);
+
 
 
   return (
@@ -31,28 +51,19 @@ function App() {
 
       <section className='url-input'>
         <input
-              
-              type="text"
-              placeholder="Shorten a link here..."
-              value={userInput}
-              onChange={(e) => {setUserInput(e.target.value)}}
+
+          type="text"
+          placeholder="Shorten a link here..."
+          value={userInput}
+          onChange={(e) => { setUserInput(e.target.value) }}
         />
         <button onClick={fetchData}>Shorten It!</button>
       </section>
 
       <section className='shorten-url'>
-        <div>
-          {shortenedLink.original_link} <br/> 
-          {/* delete it later */}
 
-          {shortenedLink.full_share_link}
-        </div>
-        <CopyToClipboard text={shortenedLink}>
-          <button>
-            Copy
-          </button>
-        </CopyToClipboard>
-        
+        <ShowUrlList urlList={urlList} />
+
       </section>
 
       <section className='info'>info</section>
