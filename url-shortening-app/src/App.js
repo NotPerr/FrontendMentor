@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './App.css';
 import './index.css'
 import ShowUrlList from './ShowUrlList';
 import { ReactSVG } from 'react-svg';
-import  Logo  from './images/logo.svg';
-import bannerImg from './images/illustration-working.svg'
+import Logo from './images/logo.svg';
+
 
 
 
@@ -66,12 +65,22 @@ function App() {
           <nav className='mobile-nav'>mobile nav</nav>
         </header>
 
+        {/* banner section */}
         <section className='banner mt-4 '>
-          <div className='relative h-64'>
-            <img src={bannerImg} alt='banner image' className='w-full absolute -right-16'/>
+          <div className='h-72 w-full banner-bg'>
+            
           </div>
-          
-          <h1 className='text-4xl font-bold text-center'>More than just shorter links</h1>
+          <div className='flex flex-col items-center'>
+            <h1 className='text-4xl font-bold text-center'>More than just shorter links</h1>
+
+            <p className='text-center font-medium text-grayViolet mt-4'>
+              Build your brand’s recognition and get detailed insights
+              on how your links are performing.
+            </p>
+
+            <button className='mt-6 mb-9 bg-cyan text-white w-52 h-11 rounded-full'>Get Started</button>
+          </div>
+
         </section>
 
         <section className='url-input mx-5'>

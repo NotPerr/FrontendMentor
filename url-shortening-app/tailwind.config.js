@@ -10,6 +10,10 @@ module.exports = {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif']
       },
+      colors: {
+        'grayViolet': '#9B9A9F',
+        'cyan': 'hsl(180, 66%, 49%)'
+      }
       
     },
   },

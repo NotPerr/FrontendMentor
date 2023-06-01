@@ -2,5 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.banner-bg {
+  /* background-image: url('./images/illustration-working.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right 32px; */
+  background:  50px / contain no-repeat url('./images/illustration-working.svg');
+}
 
