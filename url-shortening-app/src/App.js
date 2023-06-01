@@ -3,6 +3,9 @@ import axios from 'axios';
 import './App.css';
 import './index.css'
 import ShowUrlList from './ShowUrlList';
+import { ReactSVG } from 'react-svg';
+import  Logo  from './images/logo.svg';
+import bannerImg from './images/illustration-working.svg'
 
 
 
@@ -56,16 +59,22 @@ function App() {
 
 
   return (
-    <div className="App">
-      <div className='px-5'>
-        <header className="App-header">
-          header
+    <div className="App font-poppins font-medium  w-full ">
+      <div className=' '>
+        <header className="App-header flex flex-row justify-between mt-5 mx-5">
+          <ReactSVG src={Logo} />
           <nav className='mobile-nav'>mobile nav</nav>
         </header>
 
-        <section className='banner'>banner</section>
+        <section className='banner mt-4 '>
+          <div className='relative h-64'>
+            <img src={bannerImg} alt='banner image' className='w-full absolute -right-16'/>
+          </div>
+          
+          <h1 className='text-4xl font-bold text-center'>More than just shorter links</h1>
+        </section>
 
-        <section className='url-input'>
+        <section className='url-input mx-5'>
           <input
 
             type="text"
@@ -77,7 +86,7 @@ function App() {
           <button onClick={fetchData}>Shorten It!</button>
         </section>
 
-        <section className='shorten-url'>
+        <section className='shorten-url w-full'>
 
           <ShowUrlList urlList={urlList} />
 
