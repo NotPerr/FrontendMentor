@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
     './src/App.js',
-    '.src/images/illustration-working.svg',
     './public/index.html',
-    '.src/ShowUrlList.js'
+    './src/ShowUrlList.js'
   ],
   theme: {
     extend: {

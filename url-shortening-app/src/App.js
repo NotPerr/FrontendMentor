@@ -36,7 +36,7 @@ function App() {
       const newShortenedLink = response.data.result;
       const newArr = [...urlList, newShortenedLink];
       setUrlList(newArr);
-
+      setIsInvalid(false);
     } catch (e) {
       console.log(e);
     }
@@ -100,14 +100,18 @@ function App() {
         </section>
       </div>
 
-
-      <section className='shorten-url w-full bg-bgGray pt-44'>
+      {/* url list */}
+      <section className='shorten-url w-full bg-bgGray pt-44 px-5 pb-16'>
 
         <ShowUrlList urlList={urlList} />
 
       </section>
 
-      <section className='info'>info</section>
+      <section className='info bg-bgGray'>
+        <h2>Advanced Statistics</h2>
+        <p>Track how your links are performing across the web with our 
+        advanced statistics dashboard.</p>
+      </section>
 
 
 
