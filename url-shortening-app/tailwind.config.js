@@ -3,7 +3,8 @@ module.exports = {
   content: [
     './src/App.js',
     '.src/images/illustration-working.svg',
-    './public/index.html'
+    './public/index.html',
+    '.src/ShowUrlList.js'
   ],
   theme: {
     extend: {
@@ -12,7 +13,8 @@ module.exports = {
       },
       colors: {
         'grayViolet': '#9B9A9F',
-        'cyan': 'hsl(180, 66%, 49%)'
+        'cyan': 'hsl(180, 66%, 49%)',
+        'bgGray': '#F0F1F6'
       }
       
     },

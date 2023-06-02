@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 .banner-bg {
-  /* background-image: url('./images/illustration-working.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: right 32px; */
   background:  50px / contain no-repeat url('./images/illustration-working.svg');
+}
+
+.input-bg {
+  background:  right top / 237px 90px no-repeat url('./images/bg-shorten-mobile.svg');
+  background-color: #3A3053;
+}
+
+.invalid-input::placeholder {
+  color: pink;
 }
 
