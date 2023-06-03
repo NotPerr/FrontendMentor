@@ -111,7 +111,7 @@ function App() {
       </section>
 
       {/* info section */}
-      <section className='info bg-bgGray'>
+      <section className='info bg-bgGray '>
         <h2 className='text-center text-2xl font-bold'>Advanced Statistics</h2>
         <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-10'>Track how your links are performing across the web with our 
         advanced statistics dashboard.</p>
@@ -124,7 +124,7 @@ function App() {
                 <img src={Brand} alt='bran recognition icon'/>
               </div>
             </div>
-            <h3 className='text-center mt-11'>Brand Recognition</h3>
+            <h3 className='text-center mt-16'>Brand Recognition</h3>
             <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 '>
             Boost your brand recognition with each click. Generic links don’t 
             mean a thing. Branded links help instil confidence in your content.
@@ -138,7 +138,7 @@ function App() {
                 <img src={Detail} alt='bran recognition icon'/>
               </div>
             </div>
-            <h3 className='text-center mt-11'>Detailed Records</h3>
+            <h3 className='text-center mt-16'>Detailed Records</h3>
             <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 '>
             Gain insights into who is clicking your links. Knowing when and where 
             people engage with your content helps inform better decisions.
@@ -146,13 +146,13 @@ function App() {
           </article>
 
           {/* Fully Customizable */}
-          <article className='bg-white my-8 mx-5 relative rounded'>
+          <article className='bg-white my-8 mx-5 relative rounded mb-11'>
             <div className='absolute -top-9  flex justify-center w-full'>
               <div className='bg-violet p-4 rounded-full'>
                 <img src={Customize} alt='bran recognition icon'/>
               </div>
             </div>
-            <h3 className='text-center mt-11'>Fully Customizable</h3>
+            <h3 className='text-center mt-16'>Fully Customizable</h3>
             <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 '>
             Improve brand awareness and content discoverability through customizable 
             links, supercharging audience engagement.
@@ -166,7 +166,10 @@ function App() {
 
 
 
-      <section className='boost'>boost</section>
+      <section className='boost-bg flex flex-col items-center '>
+        <h3 className='text-center text-white font-bold text-2xl mt-24'>Boost your links today</h3>
+        <button className='mt-9  bg-cyan text-white w-40 h-11 rounded-full mb-20'>Get Started</button>
+      </section>
 
       <footer>footer</footer>
 

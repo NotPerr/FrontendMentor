@@ -15,3 +15,7 @@
   color: pink;
 }
 
+.boost-bg {
+  background:  right top / auto auto no-repeat url('./images/bg-boost-mobile.svg');
+  background-color: #3A3053;
+}
