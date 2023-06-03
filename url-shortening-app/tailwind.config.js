@@ -14,7 +14,8 @@ module.exports = {
       colors: {
         'grayViolet': '#9B9A9F',
         'cyan': 'hsl(180, 66%, 49%)',
-        'bgGray': '#F0F1F6'
+        'bgGray': '#F0F1F6',
+        'violet': '#3A3053'
       }
       
     },

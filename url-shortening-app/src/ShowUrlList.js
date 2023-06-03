@@ -27,7 +27,10 @@ export default function ShowUrlList({ urlList }) {
             {url.full_short_link}
           </div>
           <CopyToClipboard text={url.full_short_link}>
-            <button onClick={() => handleCopy(reversedIndex)} className='bg-cyan text-white w-full mb-4 py-2 rounded'>
+            <button onClick={() => handleCopy(reversedIndex)} 
+            className={`text-white w-full mb-4 py-2 rounded
+            ${copiedIndex === urlList.length - 1 - reversedIndex ? 'bg-violet' : 'bg-cyan'}`}>
+
             {copiedIndex === urlList.length - 1 - reversedIndex ? 'Copied' : 'Copy'}
             </button>
           </CopyToClipboard>

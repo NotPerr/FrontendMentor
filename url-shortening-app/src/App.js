@@ -4,6 +4,9 @@ import './index.css'
 import ShowUrlList from './ShowUrlList';
 import { ReactSVG } from 'react-svg';
 import Logo from './images/logo.svg';
+import Brand from './images/icon-brand-recognition.svg';
+import Detail from './images/icon-detailed-records.svg';
+import Customize from './images/icon-fully-customizable.svg';
 
 
 
@@ -107,10 +110,58 @@ function App() {
 
       </section>
 
+      {/* info section */}
       <section className='info bg-bgGray'>
-        <h2>Advanced Statistics</h2>
-        <p>Track how your links are performing across the web with our 
+        <h2 className='text-center text-2xl font-bold'>Advanced Statistics</h2>
+        <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-10'>Track how your links are performing across the web with our 
         advanced statistics dashboard.</p>
+
+        <div className='flex flex-col justify-center'>
+        {/* Brand Recognition */}
+          <article className='bg-white my-8 mx-5 relative rounded'>
+            <div className='absolute -top-9  flex justify-center w-full'>
+              <div className='bg-violet p-4 rounded-full'>
+                <img src={Brand} alt='bran recognition icon'/>
+              </div>
+            </div>
+            <h3 className='text-center mt-11'>Brand Recognition</h3>
+            <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 '>
+            Boost your brand recognition with each click. Generic links don’t 
+            mean a thing. Branded links help instil confidence in your content.
+            </p>
+          </article>
+
+          {/* Detailed Records */}
+          <article className='bg-white my-8 mx-5 relative rounded'>
+            <div className='absolute -top-9  flex justify-center w-full'>
+              <div className='bg-violet p-4 rounded-full'>
+                <img src={Detail} alt='bran recognition icon'/>
+              </div>
+            </div>
+            <h3 className='text-center mt-11'>Detailed Records</h3>
+            <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 '>
+            Gain insights into who is clicking your links. Knowing when and where 
+            people engage with your content helps inform better decisions.
+            </p>
+          </article>
+
+          {/* Fully Customizable */}
+          <article className='bg-white my-8 mx-5 relative rounded'>
+            <div className='absolute -top-9  flex justify-center w-full'>
+              <div className='bg-violet p-4 rounded-full'>
+                <img src={Customize} alt='bran recognition icon'/>
+              </div>
+            </div>
+            <h3 className='text-center mt-11'>Fully Customizable</h3>
+            <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 '>
+            Improve brand awareness and content discoverability through customizable 
+            links, supercharging audience engagement.
+            </p>
+          </article>
+
+
+        </div>
+        
       </section>
 
 
