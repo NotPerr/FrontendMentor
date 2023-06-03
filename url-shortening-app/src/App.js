@@ -7,6 +7,11 @@ import Logo from './images/logo.svg';
 import Brand from './images/icon-brand-recognition.svg';
 import Detail from './images/icon-detailed-records.svg';
 import Customize from './images/icon-fully-customizable.svg';
+import FooterLogo from './images/footer-logo.svg';
+import Facebook from './images/icon-facebook.svg';
+import Twitter from './images/icon-twitter.svg';
+import Pinterest from './images/icon-pinterest.svg';
+import Instagram from './images/icon-instagram.svg';
 
 
 
@@ -171,7 +176,46 @@ function App() {
         <button className='mt-9  bg-cyan text-white w-40 h-11 rounded-full mb-20'>Get Started</button>
       </section>
 
-      <footer>footer</footer>
+      <footer className='bg-bgFooter text-white flex flex-col items-center'>
+        <div className='mb-9 mt-12'>
+          <img src={FooterLogo} alt='logo'/>
+        </div>
+        
+
+        <h4 className='mb-4'>Features</h4>
+        <ul className='text-center text-grayViolet mb-10'>
+          <li className='mb-1.5'>Link Shortening</li>
+          <li className='mb-1.5'>Branded Links</li>
+          <li className='mb-1.5'>Analytics</li>
+        </ul>
+
+        <h4 className='mb-4'>Resources</h4>
+        <ul className='text-center text-grayViolet mb-10'>
+          <li className='mb-1.5'>Blog</li>
+          <li className='mb-1.5'>Developers</li>
+          <li className='mb-1.5'>Support</li>
+        </ul>
+
+        <h4 className='mb-4'>Company</h4>
+        <ul className='text-center text-grayViolet mb-10'>
+          <li className='mb-1.5'>About</li>
+          <li className='mb-1.5'>Our Team</li>
+          <li className='mb-1.5'>Careers</li>
+          <li className='mb-1.5'>Contact</li>
+        </ul>
+
+        <ul className='text-center flex mb-10'>
+          <li className='mr-4'><img src={Facebook} alt='Facebook' /></li>
+          <li className='mr-4'><img src={Twitter} alt='Twitter' /></li>
+          <li className='mr-4'><img src={Pinterest} alt='Pinterest' /></li>
+          <li><img src={Instagram} alt='Instagram' /></li>
+        </ul>
+
+        <div class="attribution text-sm text-center">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" className='text-cyan' target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#" className='text-cyan'>Perri Hu</a>.
+  </div>
+      </footer>
 
 
     </div>
