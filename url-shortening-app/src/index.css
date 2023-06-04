@@ -19,3 +19,15 @@
   background:  right top / auto auto no-repeat url('./images/bg-boost-mobile.svg');
   background-color: #3A3053;
 }
+
+.slide {
+  transition: all 0.5s;
+}
+
+.mobile-nav-hide {
+  top: -1500%;
+}
+
+.mobile-nav-show {
+  top: 100%;
+}

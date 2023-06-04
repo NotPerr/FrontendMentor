@@ -12,6 +12,8 @@ import Facebook from './images/icon-facebook.svg';
 import Twitter from './images/icon-twitter.svg';
 import Pinterest from './images/icon-pinterest.svg';
 import Instagram from './images/icon-instagram.svg';
+import Menu from './images/menu.svg';
+import './function.js';
 
 
 
@@ -68,9 +70,19 @@ function App() {
   return (
     <div className="App font-poppins font-medium  w-full ">
 
-      <header className="App-header flex flex-row justify-between mt-5 mx-5">
-        <ReactSVG src={Logo} />
-        <nav className='mobile-nav'>mobile nav</nav>
+      <header className="App-header flex mt-5 mx-5 justify-between flex-wrap relative">
+        <ReactSVG src={Logo} className=''/>
+        <img id='toggle-menu' src={Menu} alt='menu' className='w-7'/>
+        {/* mobile nav */}
+        <nav  id='mobile-nav' className='slide mobile-nav-hide absolute bg-violet text-white w-full z-50 px-3 rounded-lg'>
+          <ul className='text-center my-8 border-b-[0.5px] border-grayViolet'>
+            <li className='mb-6'><a href='#'>Features</a></li>
+            <li className='mb-6'><a href='#'>Pricing</a></li>
+            <li className='mb-6'><a href='#'>Resources</a></li>
+          </ul>
+          <button className='w-full'>Login</button>
+          <button className='w-full bg-cyan text-white rounded-full py-3 my-6'>Sign Up</button>
+        </nav>
       </header>
 
       <div className='relative flex flex-col'>
@@ -211,7 +223,7 @@ function App() {
           <li><img src={Instagram} alt='Instagram' /></li>
         </ul>
 
-        <div class="attribution text-sm text-center">
+        <div className="attribution text-sm text-center">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" className='text-cyan' target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#" className='text-cyan'>Perri Hu</a>.
   </div>
