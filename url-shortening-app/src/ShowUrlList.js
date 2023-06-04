@@ -19,8 +19,8 @@ export default function ShowUrlList({ urlList }) {
       
 
       return reversedUrlList.map((url, reversedIndex) => (
-        <div key={url.code} className='bg-white mb-4 px-3 rounded'>
-            <div className='py-2 border-b '>
+        <div key={url.code} className='bg-white mb-4 px-3 rounded md:flex '>
+            <div className='py-2 border-b w-72'>
                 <p className='truncate' >{url.original_link}</p>
             </div>
           <div className='py-2 text-cyan '>
@@ -28,7 +28,7 @@ export default function ShowUrlList({ urlList }) {
           </div>
           <CopyToClipboard text={url.full_short_link}>
             <button onClick={() => handleCopy(reversedIndex)} 
-            className={`text-white w-full mb-4 py-2 rounded
+            className={`text-white w-full mb-4 py-2 rounded md:w-24
             ${copiedIndex === urlList.length - 1 - reversedIndex ? 'bg-violet' : 'bg-cyan'}`}>
 
             {copiedIndex === urlList.length - 1 - reversedIndex ? 'Copied!' : 'Copy'}

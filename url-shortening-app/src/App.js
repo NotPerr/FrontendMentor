@@ -18,6 +18,7 @@ import './function.js';
 
 
 
+
 function App() {
 
   const [userInput, setUserInput] = useState("");
@@ -144,7 +145,7 @@ function App() {
       </div>
 
       {/* url list */}
-      <section className='shorten-url w-full bg-bgGray pt-44 px-5 pb-16'>
+      <section className='shorten-url w-full bg-bgGray pt-44 px-5 pb-16 md:px-7'>
 
         <ShowUrlList urlList={urlList} />
 
@@ -252,7 +253,7 @@ function App() {
   </div>
       </footer>
 
-
+      
     </div>
   );
 }
