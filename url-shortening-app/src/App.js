@@ -105,21 +105,21 @@ function App() {
         </nav>
       </header>
 
-      <div className='relative flex flex-col'>
+      <div className='relative flex flex-col '>
         {/* banner section */}
-        <section className='banner mt-4 items-center pb-28'>
+        <section className='banner mt-4 items-center pb-28 md: flex md:flex-row-reverse md:ml-7'>
           <div className='h-72 w-full banner-bg'>
 
           </div>
-          <div className='flex flex-col items-center'>
-            <h1 className='text-4xl font-bold text-center'>More than just shorter links</h1>
+          <div className='flex flex-col items-center md:items-start'>
+            <h1 className='text-4xl font-bold text-center md:text-left'>More than just shorter links</h1>
 
-            <p className='text-center font-medium text-grayViolet mt-4'>
+            <p className='text-center font-medium text-grayViolet mt-4 md:text-left'>
               Build your brand’s recognition and get detailed insights
               on how your links are performing.
             </p>
 
-            <button className='mt-6  bg-cyan text-white w-40 h-11 rounded-full'>Get Started</button>
+            <button className='mt-6  bg-cyan text-white w-40 h-11 rounded-full hover:bg-cyanHover slide'>Get Started</button>
           </div>
 
         </section>
