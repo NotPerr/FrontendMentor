@@ -29,7 +29,7 @@ export default function ShowUrlList({ urlList }) {
                 </div>
                 <CopyToClipboard text={url.full_short_link}>
                     <button onClick={() => handleCopy(reversedIndex)} 
-                    className={`text-white w-full mb-4 py-2 rounded md:w-24 md:my-2
+                    className={`text-white w-full mb-4 py-2 rounded md:w-24 md:my-2 hover:bg-cyanHover slide
                     ${copiedIndex === urlList.length - 1 - reversedIndex ? 'bg-violet' : 'bg-cyan'}`}>
 
                     {copiedIndex === urlList.length - 1 - reversedIndex ? 'Copied!' : 'Copy'}

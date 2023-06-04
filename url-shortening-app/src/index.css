@@ -10,12 +10,7 @@
   background:  right top / 237px 90px no-repeat url('./images/bg-shorten-mobile.svg');
   background-color: #3A3053;
 }
-@media screen and (min-width: 768px) {
-  .input-bg {
-    background:  right top / auto auto no-repeat url('./images/bg-shorten-desktop.svg');
-    background-color: #3A3053;
-  }
-}
+
 
 .invalid-input::placeholder {
   color: pink;
@@ -36,4 +31,16 @@
 
 .mobile-nav-show {
   top: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .input-bg {
+    background:  right top / auto auto no-repeat url('./images/bg-shorten-desktop.svg');
+    background-color: #3A3053;
+  }
+
+  .boost-bg {
+    background:  right top / auto auto no-repeat url('./images/bg-boost-desktop.svg');
+    background-color: #3A3053;
+  }
 }

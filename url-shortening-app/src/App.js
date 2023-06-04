@@ -138,7 +138,7 @@ function App() {
               {isInvalid ? <div className='w-full text-red-400 text-xs mt-1 absolute -bottom-100%'>Please add a link</div> : null}
             </div>
             
-            <button className='bg-cyan text-white w-full h-11 mt-6 rounded md:mt-0 md:w-80 md:ml-2' onClick={fetchData}>Shorten It!</button>
+            <button className='bg-cyan text-white w-full h-11 mt-6 rounded md:mt-0 md:w-80 md:ml-2 hover:bg-cyanHover slide' onClick={fetchData}>Shorten It!</button>
           </div>
 
         </section>
@@ -154,10 +154,14 @@ function App() {
       {/* info section */}
       <section className='info bg-bgGray '>
         <h2 className='text-center text-2xl font-bold'>Advanced Statistics</h2>
-        <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-10'>Track how your links are performing across the web with our 
+        <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-10 md:mx-32'>Track how your links are performing across the web with our 
         advanced statistics dashboard.</p>
+        <div></div>
 
-        <div className='flex flex-col justify-center'>
+        <div className='flex flex-col justify-center  z-40 relative '>
+        <div className='flex justify-center  absolute top-0 w-full h-full pb-11'>
+            <div className='bg-cyan w-3 h-full z-0'></div>
+          </div>
         {/* Brand Recognition */}
           <article className='bg-white my-8 mx-5 relative rounded'>
             <div className='absolute -top-9  flex justify-center w-full'>
@@ -170,6 +174,7 @@ function App() {
             Boost your brand recognition with each click. Generic links don’t 
             mean a thing. Branded links help instil confidence in your content.
             </p>
+            
           </article>
 
           {/* Detailed Records */}
@@ -184,6 +189,7 @@ function App() {
             Gain insights into who is clicking your links. Knowing when and where 
             people engage with your content helps inform better decisions.
             </p>
+            
           </article>
 
           {/* Fully Customizable */}
@@ -199,7 +205,7 @@ function App() {
             links, supercharging audience engagement.
             </p>
           </article>
-
+          
 
         </div>
         
@@ -209,7 +215,7 @@ function App() {
 
       <section className='boost-bg flex flex-col items-center '>
         <h3 className='text-center text-white font-bold text-2xl mt-24'>Boost your links today</h3>
-        <button className='mt-9  bg-cyan text-white w-40 h-11 rounded-full mb-20'>Get Started</button>
+        <button className='mt-9  bg-cyan text-white w-40 h-11 rounded-full mb-20 md:mb-10 hover:bg-cyanHover slide'>Get Started</button>
       </section>
 
       <footer className='bg-bgFooter text-white flex flex-col items-center'>
