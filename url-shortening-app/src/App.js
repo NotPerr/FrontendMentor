@@ -107,7 +107,7 @@ function App() {
 
       <div className='relative flex flex-col '>
         {/* banner section */}
-        <section className='banner mt-4 items-center pb-28 md: flex md:flex-row-reverse md:ml-7'>
+        <section className='banner mt-4 items-center pb-28 md:flex md:flex-row-reverse md:ml-7'>
           <div className='h-72 w-full banner-bg'>
 
           </div>
@@ -124,17 +124,20 @@ function App() {
 
         </section>
         {/* input section */}
-        <section className='url-input px-5 absolute -bottom-24 w-full'>
-          <div className='input-bg flex flex-col items-center py-4 px-4 rounded-lg'>
-            <input
-              className={`w-full py-2 pl-2.5 rounded  ${isInvalid ? 'border-red-500 border-2 placeholder:text-red invalid-input' : 'border-0'}`}
-              type="text"
-              placeholder="Shorten a link here..."
-              value={userInput}
-              onChange={(e) => { setUserInput(e.target.value) }}
-            />
-            {isInvalid ? <div className='w-full text-red-400 text-xs mt-1'>Please add a link</div> : null}
-            <button className='bg-cyan text-white w-full h-11 mt-3.5 rounded' onClick={fetchData}>Shorten It!</button>
+        <section className='url-input px-5 absolute -bottom-24 w-full md:px-7 md:-bottom-20'>
+          <div className='input-bg flex flex-col items-center p-8 rounded-lg md:flex-row'>
+            <div className='w-full relative'>
+              <input
+                className={`w-full py-2 pl-2.5 rounded  ${isInvalid ? 'border-red-500 border-2 placeholder:text-red invalid-input' : 'border-0'}`}
+                type="text"
+                placeholder="Shorten a link here..."
+                value={userInput}
+                onChange={(e) => { setUserInput(e.target.value) }}
+              />
+              {isInvalid ? <div className='w-full text-red-400 text-xs mt-1 absolute -bottom-100%'>Please add a link</div> : null}
+            </div>
+            
+            <button className='bg-cyan text-white w-full h-11 mt-6 rounded md:mt-0 md:w-80 md:ml-2' onClick={fetchData}>Shorten It!</button>
           </div>
 
         </section>
