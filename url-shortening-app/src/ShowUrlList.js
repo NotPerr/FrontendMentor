@@ -31,7 +31,7 @@ export default function ShowUrlList({ urlList }) {
             className={`text-white w-full mb-4 py-2 rounded
             ${copiedIndex === urlList.length - 1 - reversedIndex ? 'bg-violet' : 'bg-cyan'}`}>
 
-            {copiedIndex === urlList.length - 1 - reversedIndex ? 'Copied' : 'Copy'}
+            {copiedIndex === urlList.length - 1 - reversedIndex ? 'Copied!' : 'Copy'}
             </button>
           </CopyToClipboard>
         </div>

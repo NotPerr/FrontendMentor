@@ -16,7 +16,9 @@ module.exports = {
         'cyan': 'hsl(180, 66%, 49%)',
         'bgGray': '#F0F1F6',
         'violet': '#3A3053',
-        'bgFooter': '#232027'
+        'bgFooter': '#232027',
+        'darkViolet': 'hsl(260, 8%, 14%)',
+        'cyanHover': '#9BE2E4'
       }
       
     },

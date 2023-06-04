@@ -70,9 +70,9 @@ function App() {
   return (
     <div className="App font-poppins font-medium  w-full ">
 
-      <header className="App-header flex mt-5 mx-5 justify-between flex-wrap relative">
-        <ReactSVG src={Logo} className=''/>
-        <img id='toggle-menu' src={Menu} alt='menu' className='w-7'/>
+      <header className="App-header flex mt-5 mx-5 md:mx-7 justify-between content-center flex-wrap relative">
+        <ReactSVG src={Logo} className='flex flex-col justify-center'/>
+        <img id='toggle-menu' src={Menu} alt='menu' className='w-7 md:hidden' />
         {/* mobile nav */}
         <nav  id='mobile-nav' className='slide mobile-nav-hide absolute bg-violet text-white w-full z-50 px-3 rounded-lg'>
           <ul className='text-center my-8 border-b-[0.5px] border-grayViolet'>
@@ -82,6 +82,26 @@ function App() {
           </ul>
           <button className='w-full'>Login</button>
           <button className='w-full bg-cyan text-white rounded-full py-3 my-6'>Sign Up</button>
+        </nav>
+
+        {/* desktop nav */}
+        <nav className='desktop-nav z-50 px-3  flex hidden md:block grow'>
+          <div className='flex justify-between w-full'>
+            <div>
+              <ul className='text-center my-8 flex text-grayViolet ml-2'>
+                <li className='mr-4 hover:text-darkViolet slide'><a href='#'>Features</a></li>
+                <li className='mr-4 hover:text-darkViolet slide'><a href='#'>Pricing</a></li>
+                <li className='hover:text-darkViolet slide'><a href='#'>Resources</a></li>
+              </ul>
+            </div>
+            
+            <div className='flex justify-center items-center'>
+              <button className='px-4'>Login</button>
+              <button className=' px-5 bg-cyan text-white rounded-full h-9 hover:bg-cyanHover slide'>Sign Up</button>
+            </div>
+            
+          </div>
+          
         </nav>
       </header>
 
