@@ -71,7 +71,8 @@ function App() {
   return (
     <div className="App font-poppins font-medium  w-full ">
 
-      <header className="App-header flex mt-5 mx-5 md:mx-7 justify-between content-center flex-wrap relative">
+      <header className="App-header flex mt-5 mx-5 md:mx-7 justify-between content-center flex-wrap relative
+      lg:mx-10">
         <ReactSVG src={Logo} className='flex flex-col justify-center'/>
         <img id='toggle-menu' src={Menu} alt='menu' className='w-7 md:hidden' />
         {/* mobile nav */}
@@ -108,7 +109,7 @@ function App() {
 
       <div className='relative flex flex-col '>
         {/* banner section */}
-        <section className='banner mt-4 items-center pb-28 md:flex md:flex-row-reverse md:ml-7'>
+        <section className='banner mt-4 items-center pb-28 md:flex md:flex-row-reverse md:ml-7 lg:ml-10'>
           <div className='h-72 w-full banner-bg'>
 
           </div>
@@ -125,7 +126,7 @@ function App() {
 
         </section>
         {/* input section */}
-        <section className='url-input px-5 absolute -bottom-24 w-full md:px-7 md:-bottom-20'>
+        <section className='url-input px-5 absolute -bottom-24 w-full md:px-7 md:-bottom-20 lg:px-10'>
           <div className='input-bg flex flex-col items-center p-8 rounded-lg md:flex-row'>
             <div className='w-full relative'>
               <input
@@ -145,32 +146,32 @@ function App() {
       </div>
 
       {/* url list */}
-      <section className='shorten-url w-full bg-bgGray pt-44 px-5 pb-16 md:px-7'>
+      <section className='shorten-url w-full bg-bgGray pt-44 px-5 pb-16 md:px-7 lg:px-10'>
 
         <ShowUrlList urlList={urlList} />
 
       </section>
 
       {/* info section */}
-      <section className='info bg-bgGray '>
+      <section className='info bg-bgGray'>
         <h2 className='text-center text-2xl font-bold'>Advanced Statistics</h2>
         <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-10 md:mx-32'>Track how your links are performing across the web with our 
         advanced statistics dashboard.</p>
         <div></div>
 
-        <div className='flex flex-col justify-center  z-40 relative '>
-        <div className='flex justify-center  absolute top-0 w-full h-full pb-11'>
-            <div className='bg-cyan w-3 h-full z-0'></div>
+        <div className='flex flex-col justify-center  z-40 relative lg:flex-row lg:mx-10 '>
+        <div className='flex justify-center  absolute top-0 w-full h-full pb-11  lg:items-center lg:px-6'>
+            <div className='bg-cyan w-3 h-full z-0 lg:w-full lg:h-3'></div>
           </div>
         {/* Brand Recognition */}
-          <article className='bg-white my-8 mx-5 relative rounded'>
-            <div className='absolute -top-9  flex justify-center w-full'>
+          <article className='bg-white my-8 mx-5 relative rounded lg:h-72'>
+            <div className='absolute -top-9  flex justify-center w-full lg:justify-start lg:ml-4'>
               <div className='bg-violet p-4 rounded-full'>
                 <img src={Brand} alt='bran recognition icon'/>
               </div>
             </div>
-            <h3 className='text-center mt-16'>Brand Recognition</h3>
-            <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 '>
+            <h3 className='text-center mt-16 lg:text-left lg:ml-4'>Brand Recognition</h3>
+            <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 lg:text-left'>
             Boost your brand recognition with each click. Generic links don’t 
             mean a thing. Branded links help instil confidence in your content.
             </p>
@@ -178,14 +179,14 @@ function App() {
           </article>
 
           {/* Detailed Records */}
-          <article className='bg-white my-8 mx-5 relative rounded'>
-            <div className='absolute -top-9  flex justify-center w-full'>
+          <article className='bg-white my-8 mx-5 relative rounded lg:my-16 lg:h-72'>
+            <div className='absolute -top-9  flex justify-center w-full lg:justify-start lg:ml-4'>
               <div className='bg-violet p-4 rounded-full'>
                 <img src={Detail} alt='bran recognition icon'/>
               </div>
             </div>
-            <h3 className='text-center mt-16'>Detailed Records</h3>
-            <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 '>
+            <h3 className='text-center mt-16 lg:text-left lg:ml-4'>Detailed Records</h3>
+            <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 lg:text-left'>
             Gain insights into who is clicking your links. Knowing when and where 
             people engage with your content helps inform better decisions.
             </p>
@@ -193,14 +194,14 @@ function App() {
           </article>
 
           {/* Fully Customizable */}
-          <article className='bg-white my-8 mx-5 relative rounded mb-11'>
-            <div className='absolute -top-9  flex justify-center w-full'>
+          <article className='bg-white my-8 mx-5 relative rounded mb-11 lg:my-28 lg:h-72'>
+            <div className='absolute -top-9  flex justify-center w-full lg:justify-start lg:ml-4'>
               <div className='bg-violet p-4 rounded-full'>
                 <img src={Customize} alt='bran recognition icon'/>
               </div>
             </div>
-            <h3 className='text-center mt-16'>Fully Customizable</h3>
-            <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 '>
+            <h3 className='text-center mt-16 lg:text-left lg:ml-4'>Fully Customizable</h3>
+            <p className='text-center font-medium text-grayViolet mt-4 mx-4 mb-6 lg:text-left'>
             Improve brand awareness and content discoverability through customizable 
             links, supercharging audience engagement.
             </p>
