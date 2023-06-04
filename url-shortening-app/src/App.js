@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.css'
 import ShowUrlList from './ShowUrlList';
@@ -218,47 +218,50 @@ function App() {
         <button className='mt-9  bg-cyan text-white w-40 h-11 rounded-full mb-20 md:mb-10 hover:bg-cyanHover slide'>Get Started</button>
       </section>
 
-      <footer className='bg-bgFooter text-white flex flex-col items-center'>
-        <div className='mb-9 mt-12'>
+      <footer className='bg-bgFooter text-white flex flex-col items-center flex-wrap md:flex-row md:items-start md:pt-12'>
+        <div className='mb-9 mt-12 md:ml-4 md:mr-10 md:mt-0'>
           <img src={FooterLogo} alt='logo'/>
         </div>
         
 
-        <h4 className='mb-4'>Features</h4>
-        <ul className='text-center text-grayViolet mb-10'>
-          <li className='mb-1.5'>Link Shortening</li>
-          <li className='mb-1.5'>Branded Links</li>
-          <li className='mb-1.5'>Analytics</li>
+        
+        <ul className='text-center text-grayViolet mb-10 md:mb-0 md:mr-8'>
+          <h4 className='mb-4 text-white'>Features</h4>
+          <li className='mb-1.5'><a href='#' className='hover:text-cyan'>Link Shortening</a></li>
+          <li className='mb-1.5'><a href='#' className='hover:text-cyan'>Branded Links</a></li>
+          <li className='mb-1.5'><a href='#' className='hover:text-cyan'>Analytics</a></li>
         </ul>
 
-        <h4 className='mb-4'>Resources</h4>
-        <ul className='text-center text-grayViolet mb-10'>
-          <li className='mb-1.5'>Blog</li>
-          <li className='mb-1.5'>Developers</li>
-          <li className='mb-1.5'>Support</li>
+        
+        <ul className='text-center text-grayViolet mb-10 md:mb-0 md:mr-8'>
+          <h4 className='mb-4 text-white'>Resources</h4>
+          <li className='mb-1.5'><a href='#' className='hover:text-cyan'>Blog</a></li>
+          <li className='mb-1.5'><a href='#' className='hover:text-cyan'>Developers</a></li>
+          <li className='mb-1.5'><a href='#' className='hover:text-cyan'>Support</a></li>
         </ul>
 
-        <h4 className='mb-4'>Company</h4>
-        <ul className='text-center text-grayViolet mb-10'>
-          <li className='mb-1.5'>About</li>
-          <li className='mb-1.5'>Our Team</li>
-          <li className='mb-1.5'>Careers</li>
-          <li className='mb-1.5'>Contact</li>
+        
+        <ul className='text-center text-grayViolet mb-10 md:mb-0 md:mr-8'>
+          <h4 className='mb-4 text-white'>Company</h4>
+          <li className='mb-1.5'><a href='#' className='hover:text-cyan'>About</a></li>
+          <li className='mb-1.5'><a href='#' className='hover:text-cyan'>Our Team</a></li>
+          <li className='mb-1.5'><a href='#' className='hover:text-cyan'>Careers</a></li>
+          <li className='mb-1.5'><a href='#' className='hover:text-cyan'>Contact</a></li>
         </ul>
 
         <ul className='text-center flex mb-10'>
-          <li className='mr-4'><img src={Facebook} alt='Facebook' /></li>
-          <li className='mr-4'><img src={Twitter} alt='Twitter' /></li>
-          <li className='mr-4'><img src={Pinterest} alt='Pinterest' /></li>
-          <li><img src={Instagram} alt='Instagram' /></li>
+          <li className='mr-4'><a href='#'><ReactSVG src={Facebook} /></a></li>
+          <li className='mr-4'><a href='#'><ReactSVG src={Twitter} /></a></li>
+          <li className='mr-4'><a href='#'><ReactSVG src={Pinterest} /></a></li>
+          <li><a href='#'><ReactSVG src={Instagram} /></a></li>
         </ul>
 
-        <div className="attribution text-sm text-center">
+        
+      </footer>
+      <div className="attribution text-sm text-center bg-bgFooter text-white pt-10">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" className='text-cyan' target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#" className='text-cyan'>Perri Hu</a>.
   </div>
-      </footer>
-
       
     </div>
   );
