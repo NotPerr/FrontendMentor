@@ -109,11 +109,11 @@ function App() {
 
       <div className='relative flex flex-col '>
         {/* banner section */}
-        <section className='banner mt-4 items-center pb-28 md:flex md:flex-row-reverse md:ml-7 lg:ml-10'>
+        <section className='banner mt-4 items-center pb-28 md:flex md:flex-row-reverse md:ml-7 lg:ml-10 xl:justify-between xl:w-full'>
           <div className='h-72 w-full banner-bg'>
 
           </div>
-          <div className='flex flex-col items-center md:items-start'>
+          <div className='flex flex-col items-center md:items-start xl:pl-28'>
             <h1 className='text-4xl font-bold text-center md:text-left'>More than just shorter links</h1>
 
             <p className='text-center font-medium text-grayViolet mt-4 md:text-left'>
@@ -220,7 +220,7 @@ function App() {
       </section>
 
       <footer className='bg-bgFooter text-white flex flex-col items-center flex-wrap md:flex-row md:items-start md:pt-12'>
-        <div className='mb-9 mt-12 md:ml-4 md:mr-10 md:mt-0'>
+        <div className='mb-9 mt-12 md:ml-4 md:mr-10 lg:mr-40 lg:ml-16 md:mt-0'>
           <img src={FooterLogo} alt='logo'/>
         </div>
         
@@ -250,7 +250,7 @@ function App() {
           <li className='mb-1.5'><a href='#' className='hover:text-cyan'>Contact</a></li>
         </ul>
 
-        <ul className='text-center flex mb-10'>
+        <ul className='text-center flex mb-10 lg:ml-20'>
           <li className='mr-4'><a href='#'><ReactSVG src={Facebook} /></a></li>
           <li className='mr-4'><a href='#'><ReactSVG src={Twitter} /></a></li>
           <li className='mr-4'><a href='#'><ReactSVG src={Pinterest} /></a></li>

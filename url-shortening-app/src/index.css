@@ -45,3 +45,8 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .banner-bg {
+    background:  right 200px top 0px / contain no-repeat url('./images/illustration-working.svg');
+  }
+}
