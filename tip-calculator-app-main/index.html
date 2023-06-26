@@ -15,30 +15,63 @@
   </style>
 </head>
 <body>
+  <div class="logo"><Img src='./images/logo.svg'/></div>
+  <div class="tip-calculator">
+    <section class="input-section">
+      <label for="">Bill</label>
+      <input typr="number" class="input bill-input" id="bill_input" />
+      <label for="">Select Tip %</label>
+      <div class="tip-container">
+        <div class="tip tip-5">5%</div>
+        <div class="tip tip-10">10%</div>
+        <div class="tip tip-15">15%</div>
+        <div class="tip tip-25">25%</div>
+        <div class="tip tip-50">50%</div>
+        <div is="tip_custom">
+          <input type="number" class="tip-custom" placeholder="CUSTOM">
+        </div>
+      </div>
 
-  Bill
+      <div class="people-label">
+        <label for="">Number of People</label>
+        <label for="" class="error">Can't be zero</label>
+      </div>
+      <input type="number" class="input input-people">
+    </section>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <section class="result">
+      <div class="tip-amount">
+        <div class="text">
+          <p>Tip Amount</p>
+          <p class="person">/ person</p>
+        </div>
+        <div class="amount" id="tip-amount">$4.27</div>
+      </div>
 
-  Number of People
+      <div class="total">
+        <div class="text">
+          <p>Total</p>
+          <p class="person">/ person</p>
+        </div>
+        <div class="amount" id="tip-amount">$32.79</div>
+      </div>
 
-  Tip Amount
-  / person
+      <div class="reset">RESET</div>
+    </section>
+  </div>
 
-  Total
-  / person
 
-  Reset
+  
+  
+
+  
+  
+
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Perri</a>.
   </div>
 </body>
 </html>
