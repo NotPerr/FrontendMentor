@@ -1,5 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 1.7rem;
+    margin-bottom: 2.3rem;
+}
+
+.tip-calculator {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1.4rem 1.4rem 0 0;
+}
+
+label {
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: .3rem;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    padding-right: 18px;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    font-size: 1.5rem;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.bill-input {
+    background-image: url('./images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    margin-bottom: 2rem;
+}
+
+.tip-container {
+    margin-top: .8rem;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+    column-gap: 10%;
+}
+
+.tip {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tip-custom {
+    width: 100%;
+    height: 100%;
+    padding: 0 .5rem 0 0;
+    border-radius: 4px;
+}
+
 .active-tip {
-    color: rgb(226, 43, 183);
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+
+.input-people {
+    background-image: url('./images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: 10px;
 }
 
 .error {
