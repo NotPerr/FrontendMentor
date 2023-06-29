@@ -6,10 +6,13 @@
 }
 
 body {
-    min-height: 100vh;
-    width: 100%;
     background-color: hsl(185, 41%, 84%);
     font-family: 'Space Mono', monospace;
+}
+
+main {
+    min-height: 100vh;
+    width: 100%;
 }
 
 .logo {
@@ -95,6 +98,56 @@ input {
     background-position: 10px;
 }
 
+.input-section {
+    margin-bottom: 2rem;
+}
+
+.result {
+    background-color: hsl(183, 100%, 15%);
+    color: #fff;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+}
+
+.tip-amount, .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.7rem;
+}
+
+.person {
+    font-size: .9rem;
+    color: hsl(185, 41%, 84%);
+    font-weight: 700;
+}
+
+.amount {
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+
+.result-title {
+    font-weight: 700;
+}
+
+.reset {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    padding: 9px 0 9px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
 .error {
     display: none;
+    color: red;
 }
