@@ -78,6 +78,10 @@ input {
     border-radius: 4px;
     cursor: pointer;
 }
+.tip:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
 
 .tip-custom {
     width: 100%;
@@ -107,6 +111,9 @@ input {
     color: #fff;
     padding: 1.5rem 1rem;
     border-radius: 12px;
+}
+.reset:hover {
+    background-color: hsl(185, 41%, 84%);
 }
 
 .tip-amount, .total {
