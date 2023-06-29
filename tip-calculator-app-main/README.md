@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [solution here](https://www.frontendmentor.io/solutions/responsive-tip-calculator-built-js-html-and-css-Y2F8GI4XMJ)
 - Live Site URL: [live site here](https://649d24dcb36e3b38f2cc5e1f--roaring-lollipop-aa8546.netlify.app/)
 
 ## My process
