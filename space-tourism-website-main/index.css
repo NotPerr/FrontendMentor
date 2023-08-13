@@ -1,4 +1,14 @@
 /* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+:root {
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+}
+
+
+/* ------------------- */
 /* Reset               */
 /* ------------------- */
 
@@ -78,6 +88,7 @@ select {
 }
 
 /* screen reader only */
+/* the element will be in the dom, but visually disappear */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -89,3 +100,12 @@ select {
     white-space: nowrap; /* added line */
     border: 0;
   }
+
+  /* colors */
+  .bg-dark { background-color: hsl(var(--clr-dark));}
+  .bg-accent { background-color: hsl(var(--clr-light));}
+  .bg-white { background-color: hsl(var(--clr-white));}
+
+  .text-dark { color: hsl(var(--clr-dark));}
+  .text-accent { color: hsl(var(--clr-light));}
+  .text-white { color: hsl(var(--clr-white));}
