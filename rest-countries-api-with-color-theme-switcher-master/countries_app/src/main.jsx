@@ -8,12 +8,16 @@ import {
   Route,
 } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./Home";
+import CountryDetail, {
+  loader as detailLoader,
+} from "./components/CountryDetail";
+import Home, { loader as homeLoader } from "./Home";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
+      <Route index element={<Home />} loader={homeLoader} />
+      <Route path=":ccn3" element={<CountryDetail />} loader={detailLoader} />
     </Route>
   )
 );
