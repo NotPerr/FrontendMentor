@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Await,
   defer,
@@ -6,13 +6,28 @@ import {
   Link,
   useSearchParams,
 } from "react-router-dom";
-import { getCountries } from "../api";
+import { getCountries, searchCountry } from "../api";
 
 export function loader() {
   return defer({ countries: getCountries() });
 }
 
 export default function Home() {
+  // fetch all countries
+  const dataPromise = useLoaderData();
+
+  // set region filter and search param
+  let [searchParams, setSearchParams] = useSearchParams();
+  const regionFilter = searchParams.get("region");
+
+  // search box value and search results
+  const [searchValue, setSearchValue] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  // tracking search box submitting state
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   function handleFilterChange(key, value) {
     setSearchParams((prev) => {
       if (!value) {
@@ -24,22 +39,32 @@ export default function Home() {
     });
   }
 
-  const dataPromise = useLoaderData();
-  let [searchParams, setSearchParams] = useSearchParams();
+  async function handleSearch(e) {
+    e.preventDefault();
 
-  const regionFilter = searchParams.get("region");
+    if (searchValue) {
+      setIsSubmitting(true);
+      const data = await searchCountry(searchValue);
+      setSearchResults(data);
+      setIsSubmitting(false);
+    } else {
+      return;
+    }
+  }
 
   function displayElements(countries) {
+    const countriesDisplay =
+      searchResults.length > 0 ? searchResults : countries;
     const displayArr = regionFilter
-      ? countries.filter((c) => c.region === regionFilter)
-      : countries;
+      ? countriesDisplay.filter((c) => c.region === regionFilter)
+      : countriesDisplay;
 
     return displayArr.map((country) => {
       return (
         <Link
           to={country.ccn3}
           key={country.name.common}
-          state={{ ccn3: country.ccn3 }}
+          state={{ filter: regionFilter }}
         >
           <section>
             <img src={country.flags.png} />
@@ -55,11 +80,22 @@ export default function Home() {
 
   return (
     <>
+      {isSubmitting && <p>Loading...</p>}
       <React.Suspense fallback={<p>Loading...</p>}>
         <Await resolve={dataPromise.countries}>
           {(countries) => {
             return (
               <>
+                <form onSubmit={handleSearch}>
+                  <input
+                    placeholder="Search for a country..."
+                    type="text"
+                    name="name"
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
+                  />
+                  <button type="submit">search</button>
+                </form>
                 <select
                   value={searchParams.get("region") || ""}
                   onChange={(e) => handleFilterChange("region", e.target.value)}

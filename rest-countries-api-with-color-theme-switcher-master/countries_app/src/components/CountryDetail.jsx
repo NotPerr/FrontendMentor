@@ -41,6 +41,9 @@ const nativeName = (native) => {
 // cca3 for test: 170, 470, 710(UI check)
 export default function CountryDetail() {
   const dataPromise = useLoaderData();
+  const location = useLocation();
+  console.log("location: ", location);
+  const filter = location.state.filter ? `${location.state.filter}` : "";
   return (
     <>
       <React.Suspense fallback={<p>Loading...</p>}>
@@ -48,7 +51,7 @@ export default function CountryDetail() {
           {(country) => {
             return (
               <>
-                <Link to={".."} relative="path">
+                <Link to={`..?region=${filter}`} relative="path">
                   Back
                 </Link>
                 <img src={country[0].flags.png} />
