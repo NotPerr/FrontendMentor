@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/Home.jsx", "./src/components/Header.jsx"],
+  darkMode: "selector",
+  content: [
+    "./src/Home.jsx",
+    "./src/components/Header.jsx",
+    "./src/components/Layout.jsx",
+  ],
   theme: {
     extend: {},
   },
