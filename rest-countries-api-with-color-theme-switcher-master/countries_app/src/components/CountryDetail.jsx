@@ -42,7 +42,7 @@ const nativeName = (native) => {
 export default function CountryDetail() {
   const dataPromise = useLoaderData();
   const location = useLocation();
-  console.log("location: ", location);
+
   const filter = location.state.filter ? `${location.state.filter}` : "";
   return (
     <>
@@ -50,7 +50,7 @@ export default function CountryDetail() {
         <Await resolve={dataPromise.country}>
           {(country) => {
             return (
-              <>
+              <div className="min-h-full">
                 <Link to={`..?region=${filter}`} relative="path">
                   Back
                 </Link>
@@ -70,7 +70,7 @@ export default function CountryDetail() {
 
                 <p>Border Countries:</p>
                 {bordersAll(country[0])}
-              </>
+              </div>
             );
           }}
         </Await>

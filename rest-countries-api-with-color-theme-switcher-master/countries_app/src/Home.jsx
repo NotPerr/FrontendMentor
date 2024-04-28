@@ -7,6 +7,7 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import { getCountries, searchCountry } from "../api";
+import "./index.css";
 
 export function loader() {
   return defer({ countries: getCountries() });
@@ -52,6 +53,7 @@ export default function Home() {
     }
   }
 
+  // display all country preview cards
   function displayElements(countries) {
     const countriesDisplay =
       searchResults.length > 0 ? searchResults : countries;
@@ -66,12 +68,14 @@ export default function Home() {
           key={country.name.common}
           state={{ filter: regionFilter }}
         >
-          <section>
-            <img src={country.flags.png} />
-            <h1>{country.name.common}</h1>
-            <p>Population: {country.population}</p>
-            <p>Region: {country.region}</p>
-            <p>Capital: {country.capital}</p>
+          <section className="dark:bg-darkCardBg w-3/4 rounded-md">
+            <img src={country.flags.png} className="rounded-t-md" />
+            <div className="px-3 py-5 mb-5">
+              <h1 className="mb-5">{country.name.common}</h1>
+              <p>Population: {country.population}</p>
+              <p>Region: {country.region}</p>
+              <p className="mb-3">Capital: {country.capital}</p>
+            </div>
           </section>
         </Link>
       );

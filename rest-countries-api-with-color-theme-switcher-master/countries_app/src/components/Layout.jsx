@@ -3,7 +3,7 @@ import Header from "./Header";
 
 export default function Layout() {
   return (
-    <div className="dark:bg-black dark:text-white">
+    <div className="dark:bg-darkBg dark:text-darkText min-h-screen">
       <Header />
       <main>
         <Outlet />
