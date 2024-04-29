@@ -20,6 +20,7 @@
 
   body {
     @apply min-h-screen;
+    @apply dark:bg-darkBg;
   }
 
   input {

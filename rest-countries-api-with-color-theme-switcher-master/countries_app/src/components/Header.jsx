@@ -20,7 +20,7 @@ export default function Header() {
     localStorage.setItem("color-theme", newMode ? "dark" : "light");
   };
   return (
-    <nav className="flex justify-between w-full py-5 px-3 dark:bg-darkCardBg">
+    <nav className="shadow-md flex justify-between w-full py-5 px-3  dark:bg-darkCardBg">
       <div>
         <p className="font-bold">Where in the world?</p>
       </div>

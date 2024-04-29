@@ -45,7 +45,9 @@ export default function Home() {
 
   async function handleSearch(e) {
     e.preventDefault();
-
+    if (searchError) {
+      setSearchError("");
+    }
     if (searchValue) {
       setIsSubmitting(true);
       try {
@@ -79,7 +81,7 @@ export default function Home() {
           to={country.ccn3}
           key={country.name.common}
           state={{ filter: regionFilter }}
-          className="my-6 block mx-auto w-4/5"
+          className="my-6 block mx-auto w-4/5 shadow-md"
         >
           <section className="dark:bg-darkCardBg  rounded-md">
             <img src={country.flags.png} className="rounded-t-md" />
@@ -105,7 +107,7 @@ export default function Home() {
               <>
                 <form
                   onSubmit={handleSearch}
-                  className="block my-6 w-full dark:bg-darkCardBg px-4 py-4"
+                  className="block my-6 w-full dark:bg-darkCardBg px-4 py-4 shadow-md rounded-md"
                 >
                   <button type="submit" className="mr-3">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -122,7 +124,7 @@ export default function Home() {
                 <select
                   value={searchParams.get("region") || ""}
                   onChange={(e) => handleFilterChange("region", e.target.value)}
-                  className="dark:bg-darkCardBg dark:text-darkText py-3 px-2.5 font-light w-1/2"
+                  className="dark:bg-darkCardBg dark:text-darkText py-3 px-2.5 font-light w-1/2 shadow-md rounded-md"
                 >
                   <option value="" disabled hidden>
                     Filter by Region

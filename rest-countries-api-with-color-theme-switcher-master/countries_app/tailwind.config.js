@@ -13,6 +13,7 @@ export default {
       darkBg: "#202D36",
       darkText: "#FBFFFE",
       darkCardBg: "#2B3743",
+      lightBg: "#FAFAFA",
     },
     extend: {
       fontFamily: {
