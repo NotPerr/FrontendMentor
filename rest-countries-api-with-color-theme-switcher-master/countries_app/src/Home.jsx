@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import { getCountries, searchCountry } from "../api";
 import "./index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export function loader() {
   return defer({ countries: getCountries() });
@@ -67,6 +69,7 @@ export default function Home() {
           to={country.ccn3}
           key={country.name.common}
           state={{ filter: regionFilter }}
+          className="my-6 block"
         >
           <section className="dark:bg-darkCardBg w-3/4 rounded-md">
             <img src={country.flags.png} className="rounded-t-md" />
@@ -90,19 +93,26 @@ export default function Home() {
           {(countries) => {
             return (
               <>
-                <form onSubmit={handleSearch}>
+                <form
+                  onSubmit={handleSearch}
+                  className="block my-6 w-full dark:bg-darkCardBg px-4 py-4"
+                >
+                  <button type="submit" className="mr-3">
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                  </button>
                   <input
                     placeholder="Search for a country..."
                     type="text"
                     name="name"
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
+                    className="dark:bg-darkCardBg dark:text-darkText "
                   />
-                  <button type="submit">search</button>
                 </form>
                 <select
                   value={searchParams.get("region") || ""}
                   onChange={(e) => handleFilterChange("region", e.target.value)}
+                  className="dark:bg-darkCardBg dark:text-darkText py-3 px-2.5 font-light w-1/2"
                 >
                   <option value="" disabled hidden>
                     Filter by Region
@@ -115,7 +125,7 @@ export default function Home() {
                   <option value="Europe">Europe</option>
                   <option value="Oceania">Oceania</option>
                 </select>
-                {displayElements(countries)}
+                <div>{displayElements(countries)}</div>
               </>
             );
           }}

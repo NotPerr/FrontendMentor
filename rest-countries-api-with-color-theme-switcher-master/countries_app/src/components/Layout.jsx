@@ -5,7 +5,7 @@ export default function Layout() {
   return (
     <div className="dark:bg-darkBg dark:text-darkText min-h-screen">
       <Header />
-      <main>
+      <main className="px-3">
         <Outlet />
       </main>
     </div>

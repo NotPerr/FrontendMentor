@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(
@@ -22,6 +24,7 @@ export default function Header() {
       <h1 className="text-2xl font-bold underline ">Where in the world?</h1>
       <button id="theme-toggle" type="button" onClick={toggleTheme}>
         {darkMode ? "Light Mode" : "Dark Mode"}
+        <FontAwesomeIcon icon={faMoon} />
       </button>
     </>
   );
