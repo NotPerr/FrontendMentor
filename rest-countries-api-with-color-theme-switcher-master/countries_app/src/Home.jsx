@@ -26,6 +26,7 @@ export default function Home() {
   // search box value and search results
   const [searchValue, setSearchValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [searchError, setSearchError] = useState(null);
 
   // tracking search box submitting state
 
@@ -47,9 +48,15 @@ export default function Home() {
 
     if (searchValue) {
       setIsSubmitting(true);
-      const data = await searchCountry(searchValue);
-      setSearchResults(data);
-      setIsSubmitting(false);
+      try {
+        const data = await searchCountry(searchValue);
+        setSearchResults(data);
+        setIsSubmitting(false);
+      } catch {
+        setIsSubmitting(false);
+        // search error
+        setSearchError("no search result!");
+      }
     } else {
       return;
     }
@@ -57,6 +64,9 @@ export default function Home() {
 
   // display all country preview cards
   function displayElements(countries) {
+    if (searchError) {
+      return searchError;
+    }
     const countriesDisplay =
       searchResults.length > 0 ? searchResults : countries;
     const displayArr = regionFilter
@@ -69,9 +79,9 @@ export default function Home() {
           to={country.ccn3}
           key={country.name.common}
           state={{ filter: regionFilter }}
-          className="my-6 block"
+          className="my-6 block mx-auto w-4/5"
         >
-          <section className="dark:bg-darkCardBg w-3/4 rounded-md">
+          <section className="dark:bg-darkCardBg  rounded-md">
             <img src={country.flags.png} className="rounded-t-md" />
             <div className="px-3 py-5 mb-5">
               <h1 className="mb-5">{country.name.common}</h1>
@@ -125,7 +135,9 @@ export default function Home() {
                   <option value="Europe">Europe</option>
                   <option value="Oceania">Oceania</option>
                 </select>
-                <div>{displayElements(countries)}</div>
+                <div className="place-items-center">
+                  {displayElements(countries)}
+                </div>
               </>
             );
           }}

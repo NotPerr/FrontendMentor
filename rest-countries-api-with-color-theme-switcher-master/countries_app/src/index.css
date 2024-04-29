@@ -22,19 +22,9 @@
     @apply min-h-screen;
   }
 
-  /* select {
+  input {
     -webkit-appearance: none;
-    position: relative;
   }
-
-  select:before {
-    position: absolute;
-    font-family: "Font Awesome 5 Free";
-    top: 0;
-    left: -10px;
-    content: "\f186";
-    color: #fff;
-  } */
 
   select {
     border-right: 14px solid transparent;

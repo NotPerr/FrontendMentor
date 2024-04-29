@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(
@@ -20,12 +20,22 @@ export default function Header() {
     localStorage.setItem("color-theme", newMode ? "dark" : "light");
   };
   return (
-    <>
-      <h1 className="text-2xl font-bold underline ">Where in the world?</h1>
-      <button id="theme-toggle" type="button" onClick={toggleTheme}>
-        {darkMode ? "Light Mode" : "Dark Mode"}
-        <FontAwesomeIcon icon={faMoon} />
-      </button>
-    </>
+    <nav className="flex justify-between w-full py-5 px-3 dark:bg-darkCardBg">
+      <div>
+        <p className="font-bold">Where in the world?</p>
+      </div>
+      <div>
+        <button id="theme-toggle" type="button" onClick={toggleTheme}>
+          <div className="flex items-center">
+            {darkMode ? (
+              <FontAwesomeIcon icon={faSun} className="mr-2" />
+            ) : (
+              <FontAwesomeIcon icon={faMoon} className="mr-2" />
+            )}
+            {darkMode ? "Light Mode" : "Dark Mode"}
+          </div>
+        </button>
+      </div>
+    </nav>
   );
 }
