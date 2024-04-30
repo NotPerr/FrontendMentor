@@ -15,6 +15,12 @@ export default {
       darkCardBg: "#2B3743",
       lightBg: "#FAFAFA",
     },
+    screens: {
+      phone: "300px",
+      medium: "500px",
+      tablet: "716px",
+      pc: "1000px",
+    },
     extend: {
       fontFamily: {
         nunito: ["Nunito Sans", "sans-serif"],

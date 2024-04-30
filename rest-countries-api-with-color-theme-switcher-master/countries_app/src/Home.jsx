@@ -81,9 +81,9 @@ export default function Home() {
           to={country.ccn3}
           key={country.name.common}
           state={{ filter: regionFilter }}
-          className="my-6 block mx-auto w-4/5 shadow-md"
+          className="my-6 block mx-auto shadow-md m-auto phone:w-4/5 medium:w-1/2 medium:p-3 tablet:w-1/3 pc:w-1/5"
         >
-          <section className="dark:bg-darkCardBg  rounded-md">
+          <section className="dark:bg-darkCardBg  rounded-md h-96 ">
             <img src={country.flags.png} className="rounded-t-md" />
             <div className="px-3 py-5 mb-5">
               <h1 className="mb-5">{country.name.common}</h1>
@@ -137,7 +137,7 @@ export default function Home() {
                   <option value="Europe">Europe</option>
                   <option value="Oceania">Oceania</option>
                 </select>
-                <div className="place-items-center">
+                <div className="place-items-center w-full medium:flex medium:flex-row medium:flex-wrap ">
                   {displayElements(countries)}
                 </div>
               </>

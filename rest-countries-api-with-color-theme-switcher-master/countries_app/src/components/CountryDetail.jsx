@@ -33,7 +33,7 @@ const bordersAll = (country) => {
   return country.borders.map((b) => {
     return (
       <div key={b} className="basis-1/3  pr-1 mb-1">
-        <div className="dark:bg-darkCardBg text-center">
+        <div className="dark:bg-darkCardBg text-center shadow-md">
           <p className="font-thin">{b}</p>
         </div>
       </div>
@@ -62,16 +62,22 @@ export default function CountryDetail() {
                 <Link
                   to={`..?region=${filter}`}
                   relative="path"
-                  className="block  dark:bg-darkCardBg w-2/5 my-9 py-1 shadow-md rounded-md"
+                  className="block  dark:bg-darkCardBg w-2/5 my-9 py-1 shadow-md rounded-md pc:w-1/5"
                 >
                   <div className="flex items-center justify-center">
                     <FontAwesomeIcon icon={faArrowLeft} className="mr-1" />
                     Back
                   </div>
                 </Link>
-                <div className="flex flex-col items-center justify-center">
-                  <img src={country[0].flags.png} className="w-full mb-9" />
-                  <div className="w-full">
+                <div
+                  className="flex flex-col items-center justify-center 
+                tablet:mx-auto  pc:flex-row  pc:justify-between pc:w-5/6 pc:mx-auto"
+                >
+                  <img
+                    src={country[0].flags.png}
+                    className="w-full mb-9 pc:w-4/5"
+                  />
+                  <div className="w-full pc:pl-9">
                     <h1 className="my-3">{country[0].name.common}</h1>
                     <p className="font-semibold">
                       Native Name:{" "}
