@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution URL here](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-solution-hecZsPKemc)
-- Live Site URL: [live site here](https://6631065f1ad8c41e1a02e280--merry-starship-f8504e.netlify.app/)
+- Live Site URL: [live site here](https://664c815017df840b64275448--clinquant-creponne-853c9b.netlify.app/)
 
 ## My process
 
